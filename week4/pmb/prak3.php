@@ -24,7 +24,7 @@ include_once('sidebar.php');
     <!-- /.content-header -->
     <section class="content">
         <?php
-        include_once('../../week3/form_registrasi.php')
+        include_once('form_registrasi.php')
             ?>
     </section>
 </div>
