@@ -55,12 +55,12 @@ if (isset($_GET['idedit'])) {
                     <?php if (isset($_id)): ?>
                         <input id="jk" name="jk" value="L" <?php echo $row['jk'] == "L" ? "checked" : "" ?> type="radio"
                             class="form-control">Laki-laki
-                        <input id="jk" name="jk" valu e="P" <?php echo $row['jk'] == "P" ? "checked" : "" ?> type="radio"
+                        <input id="jk" name="jk" value="P" <?php echo $row['jk'] == "P" ? "checked" : "" ?> type="radio"
                             class="form-control">Perempuan
                     <?php else: ?>
-                        <input id="jk" name="jk" valu e="L" type="radio" class="form-control">Laki-laki
-                        <inp ut id="jk" name="jk" value="P " type="radio" class="form-control">Perempuan
-                        <?php endif ?>
+                        <input id="jk" name="jk" value="L" type="radio" class="form-control">Laki-laki
+                        <input id="jk" name="jk" value="P " type="radio" class="form-control">Perempuan
+                    <?php endif ?>
                 </div>
             </div>
         </div>

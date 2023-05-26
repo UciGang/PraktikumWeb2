@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InputController;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +40,37 @@ Route::get('/nf', function () {
 
 Route::get('/periksa', function () {
     return view('periksa');
+});
+
+Route::get('/input', function () {
+    return view('input');
+});
+
+Route::get('/output', function () {
+    return view('output');
+});
+
+Route::get('/input', [InputController::class, 'index']);
+Route::post('/output', [InputController::class, 'output']);
+
+Route::get('/skill', function () {
+    return view('skill');
+});
+
+Route::get('/skill', [FormController::class, 'index']);
+Route::post('/skill', [FormController::class, 'skill']);
+
+// rute admin backend
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/produk', [ProdukController::class, 'index']);
+
+});
+
+
+// rute frontend
+Route::prefix('frontend')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/about', [ProdukController::class, 'index']);
+
 });
